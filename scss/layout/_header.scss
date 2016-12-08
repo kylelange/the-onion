@@ -1,5 +1,6 @@
 nav {
   @include outer-container(100vw);
+  position: relative;
 }
 .logo {
   height: 90px;
@@ -49,5 +50,30 @@ nav {
 .search {
   @media screen and #{$medium-break} {
     display: none;
+  }
+}
+
+#hidden {
+  img {
+    width: 60%;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: 0;
+  }
+  a {
+    color: $text-color;
+    float: right;
+  }
+}
+
+.hidden-search {
+  input {
+    width: 80%;
+    height: 20px;
+    margin-top: 50px;
+    background-color: $button-text-color;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

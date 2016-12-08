@@ -4,16 +4,28 @@
   left: 20px;
   border: 1px solid $border-color;
   padding: 8px 10px;
+  a {
+    color: $text-color;
+  }
   &:hover {
     cursor: pointer;
   }
 }
 #menu-bars:target + #hidden {
+  //transition: transform 500ms ease;
   display: block;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 285px;
+  height: 100vh;
+  background-color: $border-color;
+  //styles for the hidden navbar itself are in _headers under the id #hidden
 }
 #hidden {
   display: none;
 }
-#hidden:target{
+#hidden:target {
   display: none;
 }
